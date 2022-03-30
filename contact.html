@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+    <title>RPA CAFÉ | Contact</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="container flex">
+        <div class="logo">
+          <a href="./index.html">RPA CAFÉ</a>
+        </div>
+        <ul class="flex flex--center">
+          <li><a href="./index.html">Accueil</a></li>
+          <li><a href="./location.html">Nous trouver</a></li>
+          <li><a class="active" href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="contact">
+      <div class="content">
+        <h1>Une question ? Contactez-nous</h1>
+        <hr />
+        <form action="#">
+          <label for="nom">Nom complet</label>
+          <input type="text" name="nom" autofocus required />
+          <label for="courriel">Courriel</label>
+          <input type="email" name="courriel" required />
+          <label for="question">Question</label>
+          <textarea name="question" cols="30" rows="3" required></textarea>
+          <button type="submit" class="btn btn--black">SOUMETRE</button>
+        </form>
+      </div>
+    </section>
+    <footer class="flex flex--center">
+      <p>Copyright ©RPACafé 2021</p>
+    </footer>
+  </body>
+</html>

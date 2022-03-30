@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+
+:root {
+  --bgColor1: #222;
+  --bgColor2: #444;
+  --bgColor3: #fff;
+  --fColor1: #fff;
+  --fColor2: #222;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* GÉNERAL */
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+hr {
+  margin-bottom: 20px;
+}
+
+hr {
+  border-top: 0.25px solid rgba(0, 0, 0, 0.15);
+  border-bottom: none;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex--center {
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  padding: 100px 0;
+  /* header + footer = 140px.*/
+  min-height: calc(100vh - 140px);
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  nav.container {
+    padding-right: 0px;
+  }
+}
+
+/* HEADER */
+
+.header {
+  background-color: var(--bgColor1);
+  color: var(--fColor1);
+}
+
+nav li,
+nav .logo {
+  align-self: center;
+}
+
+nav .logo {
+  flex: 1;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+}
+
+nav a.active,
+nav a:hover:not(.logo a) {
+  background-color: var(--bgColor2);
+}
+
+nav a {
+  padding: 24px 15px;
+  font-size: 16px;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--bgColor1);
+  color: var(--fColor1);
+  min-height: 70px;
+}
+
+/* BUTTON */
+
+.btn {
+  background-color: var(--bgColor3);
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin: 20px 0;
+  padding: 10px 25px;
+  transition: 0.2s all ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--bgColor1);
+  color: var(--fColor1);
+}
+
+.btn--black {
+  background-color: var(--bgColor1);
+  color: var(--fColor1);
+}
+.btn--black:hover {
+  background-color: var(--bgColor3);
+  color: var(--fColor2);
+}
+
+/* HERO */
+
+.hero {
+  background: no-repeat url("./images/cafe1.jpg") center/cover;
+  color: var(--fColor1);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero .content {
+  margin: auto;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  position: relative;
+  font-size: 2.5rem;
+}
+
+.hero h1::after {
+  background-color: var(--bgColor1);
+  content: "";
+  display: block;
+  height: 8px;
+  margin: 20px auto;
+  width: 80px;
+}
+
+.hero p {
+  font-weight: 300;
+  line-height: 1.6rem;
+}
+
+/* LOCATION */
+
+.location .content {
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
+.location .content div {
+  flex: 1;
+  min-width: 300px;
+}
+
+.location img {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.location .station-metro {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.location .ligne-metro {
+  border-radius: 25px;
+  padding: 1px 10px;
+  color: #fff;
+}
+
+.ligne-metro--bleu {
+  background-color: blue;
+}
+.ligne-metro--orange {
+  background-color: orangered;
+}
+
+/* CONTACT */
+
+.contact {
+  background: linear-gradient(
+      rgba(250, 250, 250, 0.65) 00%,
+      rgba(250, 250, 250, 0.65) 100%
+    ),
+    url("./images/cafe3.jpg") center/cover no-repeat;
+  color: var(--fColor2);
+  display: flex;
+  justify-content: center;
+}
+
+.contact hr {
+  border-top: 0.25px solid rgba(0, 0, 0, 0.3);
+  border-bottom: none;
+}
+
+.contact .content {
+  margin: auto;
+  padding: 0 20px;
+  width: min(100%, 800px);
+}
+
+label {
+  font-weight: 700;
+}
+
+label,
+input {
+  display: block;
+  margin-bottom: 15px;
+}
+
+input,
+textarea {
+  background-color: rgba(250, 250, 250, 0.5);
+  border-radius: 5px;
+  border: 1px solid rgba(250, 250, 250, 0.8);
+  min-width: 100%;
+  padding: 10px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid rgba(250, 250, 250, 0.8);
+}
+
+/* ANIMATION */
+
+.content {
+  animation: slide-in 0.5s ease forwards;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+@keyframes slide-in {
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
